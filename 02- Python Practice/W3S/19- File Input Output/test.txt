@@ -1,0 +1,8 @@
+Crest Infosystems Pvt. Ltd. is a global IT services and software development company headquartered in Surat, India. Founded in 2010, it specializes in custom software solutions, digital transformation, and emerging technologies like AI, Cloud, and Blockchain. 
+Core Services
+The company provides end-to-end technology solutions across various domains: 
+Software Development: Custom enterprise software, ERP, CRM, and POS systems.
+Web & Mobile Apps: Development of responsive websites and cross-platform mobile applications (Android, iOS, and Windows).
+AI & Data Engineering: Specialized in Generative AI, intelligent automation, machine learning, and advanced data analytics.
+Cloud & DevOps: Cloud-native development, cloud consulting (AWS, GCP, Azure), and modern DevOps practices.
+Testing & QA: End-to-end software testing, including test automation, functional, and usability testing.
