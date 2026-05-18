@@ -1,0 +1,5 @@
+# Owner: Maitreya Sapariya
+# Project: Crest Training
+
+HOW_MANY_SEARCHES = 5
+model = "gpt-4o-mini"

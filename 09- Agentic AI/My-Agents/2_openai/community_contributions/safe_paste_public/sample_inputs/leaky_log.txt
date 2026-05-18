@@ -1,0 +1,5 @@
+GET /v1/chat/completions HTTP/1.1
+Authorization: Bearer 
+Host: api.openai.com
+
+{"error": {"message": "Rate limit exceeded", "type": "rate_limit_error"}}
