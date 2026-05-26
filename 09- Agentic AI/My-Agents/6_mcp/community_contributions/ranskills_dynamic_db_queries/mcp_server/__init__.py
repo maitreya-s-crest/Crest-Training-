@@ -1,0 +1,6 @@
+# Owner: Maitreya Sapariya
+# Project: Crest Training
+
+"""MCP Database Server Package"""
+
+__version__ = '0.1.0'
