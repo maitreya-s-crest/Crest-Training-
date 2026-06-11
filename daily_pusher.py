@@ -137,7 +137,7 @@ def main():
     log_message("Starting daily pusher script...")
     
     # Run git status to find untracked files
-    res = subprocess.run(["git", "status", "--porcelain"], cwd=workspace, capture_output=True, text=True)
+    res = subprocess.run(["git", "status", "--porcelain", "-uall"], cwd=workspace, capture_output=True, text=True)
     if res.returncode != 0:
         log_message("Error running git status: " + res.stderr)
         return
@@ -167,10 +167,20 @@ def main():
     # Sort files to commit them in logical order (e.g. LLM Engineering Week 1 first)
     untracked_files.sort()
     
-    # Pick the first file
-    file_to_commit = untracked_files[0]
-    full_path = os.path.join(workspace, file_to_commit)
-    
+    # Find the first valid file (skip directories just in case)
+    file_to_commit = None
+    full_path = None
+    for f in untracked_files:
+        temp_path = os.path.join(workspace, f)
+        if os.path.isfile(temp_path):
+            file_to_commit = f
+            full_path = temp_path
+            break
+            
+    if not file_to_commit:
+        log_message("No valid untracked files left to commit (directories skipped)!")
+        return
+        
     log_message(f"Selected file to commit today: {file_to_commit}")
     
     # Personalize and redact file
